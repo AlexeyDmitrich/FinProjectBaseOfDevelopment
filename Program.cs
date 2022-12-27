@@ -8,13 +8,14 @@ string[] resultArray = FindShortStrings(havingArray, lengthLimit);
 PrintString(resultArray);
 
 string[] FindShortStrings (string[] startArray, int lengthLimit){
-    StringArr tempStringArr = new StringArr(0);
+    StringArr tempStringArr = new StringArr();
     for (int i = 0; i < startArray.Length; i++){
         if ((startArray[i]).Length <= lengthLimit){
             tempStringArr.Add(startArray[i]);
         }
     }
-    string[] res = tempStringArr.Pack;
+    string[] res = tempStringArr.PackInNewArr();
+    
     return res;
 }
 

@@ -7,12 +7,12 @@ namespace FinProjectBaseDev
 {
     public class StringArr
     {
-        string[] init = new int[0];
+        string[] init = new string[0];
         int counter = 0;
 
-        public StringArray(int initSize)
+        public StringArr()
         {
-            this.init = new string[initSize];
+            this.init = new string[0];
             this.counter = 0;
         }
 
@@ -22,14 +22,14 @@ namespace FinProjectBaseDev
             this.counter++;
         }
 
-        public string[] Pack () {
+        public string[] PackInNewArr () {
             string[] stringArr = this.init;
             string[] packed = new string[stringArr.Length];
             for (int i = 0; i < stringArr.Length; i++)
             {
                 packed[i] = stringArr[i];
             }
-            return packed;
+            return (string[])packed;
         }
     }
 }
