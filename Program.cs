@@ -1,11 +1,11 @@
 ﻿using FinProjectBaseDev;
 
 string[] havingArray = {"srtu", "uiy", "oiuy", "oiuo", "uiyrer", "d", "", "ad"};
-
+PrintString(havingArray);
 int lengthLimit = 3;
 Console.WriteLine();
 string[] resultArray = FindShortStrings(havingArray, lengthLimit);
-
+PrintString(resultArray);
 
 string[] FindShortStrings (string[] startArray, int lengthLimit){
     StringArr tempStringArr = new StringArr(0);
@@ -18,3 +18,9 @@ string[] FindShortStrings (string[] startArray, int lengthLimit){
     return res;
 }
 
+void PrintString (string[] array){
+    for(int i = 0; i < array.Length; i++){
+        Console.Write($"{array[i]} ");
+    }
+    Console.WriteLine();
+}
